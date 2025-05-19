@@ -1,6 +1,9 @@
+server:
+  port: 8080
+
 spring:
   application:
-    name: config-client
+    name: client-service
   profiles:
     active: dev
 
@@ -16,7 +19,6 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka
-server:
-  port: 8080
+
 custom:
   message: "дефолтное сообщение, если Config Server недоступен"
