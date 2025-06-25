@@ -22,3 +22,7 @@ eureka:
 
 custom:
   message: "дефолтное сообщение, если Config Server недоступен"
+
+feign:
+  circuitbreaker:
+    enabled: true
