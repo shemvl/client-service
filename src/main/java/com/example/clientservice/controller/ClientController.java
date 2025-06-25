@@ -1,23 +1,16 @@
 package com.example.clientservice.controller;
 
-import com.example.clientservice.model.Book;
-import com.example.clientservice.service.ClientService;
-import lombok.AllArgsConstructor;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.ResponseBody;
 
-import java.util.List;
-
-@RestController
-@RequestMapping("api/books")
-@AllArgsConstructor
+@Controller
 public class ClientController {
 
-    private final ClientService clientService;
-
-    @GetMapping
-    public List<Book> getAllBooks() {
-        return clientService.getAllBooks();
+    @ResponseBody
+    @GetMapping("/api/client/test")
+    public ResponseEntity<String> getString() {
+        return ResponseEntity.ok("Hello ");
     }
 }
